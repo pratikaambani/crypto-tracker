@@ -8,8 +8,15 @@ import os
 now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
 
-zone=os.environ.get("TZ");
-print("zone is: ", zone)
+accessToken = os.environ.get("accessToken");
+accessTokenSecret = os.environ.get("accessTokenSecret");
+consumerKey = os.environ.get("consumerKey");
+consumerSecret = os.environ.get("consumerSecret");
+
+print(accessToken)
+print(accessTokenSecret)
+print(consumerKey)
+print(consumerSecret)
 
 usdt_inr_response = requests.get("https://rest.coinapi.io/v1/exchangerate/USDT/INR?apikey=09B84A38-4C8C-482C-992B-A158A10744BC")
 usdt_inr_json = usdt_inr_response.json()
@@ -45,7 +52,7 @@ consolidated_status = current_time + usdt_inr + btc_usd + btc_inr + eth_usd + et
 print(consolidated_status)
 
 sys.path.append(".")
-twitter = Twitter(auth = OAuth('986834085405487104-hhthHh64IY0MUgurxvaeDXCG9P275dt', 'QqSEInwrver8wlgaObS1OB3UUJG85TywQewpgC9h6msWv', 'gxr8GdZx8Qr17BYNaKe1UwviP', 'tBBgoSMV9et9rBRE842oAtSKqoPNcVpv2pKvAIUvfGhGdZQUNV'))
+twitter = Twitter(auth = OAuth('1341214000059613185-tIYRH2t5VgWej839VGw64Vt0Z731Gz', 'QRrSJrrqd1oFom8bSlfXIwPlLAQUyBK20YpsnwUSEimmd', 'z52mv5cAcWjEm3XC39UBm2Pgt', 'NLp3KBfdRzacyQRXo1GEKUt62dkaOchwICIf8zilgFkWo9UaRu'))
 
 results = twitter.statuses.update(status = consolidated_status)
 print("updated status: %s" % consolidated_status)
