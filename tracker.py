@@ -11,5 +11,5 @@ while True:
   current_time = now.strftime("%H:%M:%S")
   consolidated_status = "Hi"
   print(consolidated_status)
-	time.sleep(3)
+  time.sleep(3)
   sys.path.append(".")
