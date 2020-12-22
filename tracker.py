@@ -10,11 +10,11 @@ def coinApiKeyPicker():
   print("inside coinApiKeyPicker()")
 
   if int(datetime.now().strftime("%H")) < 8:
-    apikey="09B84A38-4C8C-482C-992B-A158A10744BC"
-  elif int(datetime.now().strftime("%H")) > 16:
     apikey="2353814A-819C-4C22-8803-75FE1E8F2850"
-  else:
+  elif int(datetime.now().strftime("%H")) > 16:
     apikey="31C67320-5F39-499A-87E3-BEFCB3272316"
+  else:
+    apikey="09B84A38-4C8C-482C-992B-A158A10744BC"
 
   print(apikey)
   return apikey
