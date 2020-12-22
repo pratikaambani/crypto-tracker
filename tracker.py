@@ -75,4 +75,4 @@ while True:
   twitter = Twitter(auth = OAuth(os.environ.get("accessToken"), os.environ.get("accessTokenSecret"), os.environ.get("consumerKey"), os.environ.get("consumerSecret")))
   results = twitter.statuses.update(status = twt_status)
   print("updated status: %s" % twt_status)
-  time.sleep(2 * 60) #X minutes
+  time.sleep(2 * 60 * 60) #2 hours
