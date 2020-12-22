@@ -3,9 +3,13 @@ import json
 from datetime import datetime
 from twitter import *
 import sys
+import os
 
 now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
+
+zone=os.environ.get("TZ");
+print("zone is: ", zone)
 
 usdt_inr_response = requests.get("https://rest.coinapi.io/v1/exchangerate/USDT/INR?apikey=09B84A38-4C8C-482C-992B-A158A10744BC")
 usdt_inr_json = usdt_inr_response.json()
