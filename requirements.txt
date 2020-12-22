@@ -1,5 +1,2 @@
-requests
-json
-datetime
-twitter
-sys
+requests==2.25.1
+twitter==1.18.0
