@@ -1,1 +1,1 @@
-worker: python tracker.py
+worker: python main.py
