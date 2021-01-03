@@ -11,3 +11,5 @@ This everrunning bot is reminding me of the live rates of my favourite Cryptos.
 Want some improvements!! Feel free to raise a PR or connect with me on [Twitter]
 
    [Twitter]: <https://twitter.com/prageek_ambani>
+
+* Heroku App Dashboard: https://dashboard.heroku.com/apps/crypto-currency-trackr/settings
